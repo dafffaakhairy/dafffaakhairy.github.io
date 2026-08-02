@@ -1246,3 +1246,103 @@ footer h3 {
     }
 
 }
+
+/* ==========================================================
+   SPECIAL LINKS
+========================================================== */
+
+.links-section {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+}
+
+.links-section h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 64px;
+
+    margin-bottom: 18px;
+
+}
+
+.links-section>p {
+
+    max-width: 650px;
+
+    margin: 0 auto 50px;
+
+    color: #dddddd;
+
+    line-height: 2;
+
+}
+
+.links-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+.link-card {
+
+    width: 300px;
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    transition: .35s;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .25);
+
+}
+
+.link-card:hover {
+
+    transform: translateY(-10px) scale(1.04);
+
+    box-shadow: 0 25px 60px rgba(255, 95, 162, .35);
+
+}
+
+.link-card .icon {
+
+    font-size: 55px;
+
+    margin-bottom: 18px;
+
+}
+
+.link-card h3 {
+
+    margin-bottom: 10px;
+
+    color: #ffd166;
+
+}
+
+.link-card span {
+
+    color: #dddddd;
+
+}
