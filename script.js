@@ -35,6 +35,55 @@ const daysElement = document.getElementById(
     "days"
 );
 
+/* ==========================================================
+   HERO DATE TEXT (WIB)
+========================================================== */
+
+const heroText = document.getElementById("heroText");
+
+// Waktu sekarang dalam WIB
+const nowWIB = new Date(
+    new Date().toLocaleString("en-US", {
+        timeZone: "Asia/Jakarta"
+    })
+);
+
+// Target: 3 Agustus 2026 WIB
+const birthday = new Date(2026, 7, 3); // Bulan Agustus = 7
+
+// Hilangkan jam agar hanya membandingkan tanggal
+nowWIB.setHours(0, 0, 0, 0);
+
+const diffDays = Math.floor(
+    (nowWIB - birthday) / (1000 * 60 * 60 * 24)
+);
+
+let text;
+
+if (diffDays < 0) {
+
+    text = "besok";
+
+} else if (diffDays === 0) {
+
+    text = "hari ini";
+
+} else if (diffDays === 1) {
+
+    text = "kemarin";
+
+} else {
+
+    text = `${diffDays} hari lalu`;
+
+}
+
+heroText.innerHTML = `
+    Hari ini genap tiga bulan kita bersama.
+    <br><br>
+    Dan <strong>${text}</strong> adalah hari spesialmu. ❤️
+`;
+
 
 /* ==========================================================
    CONFIG
