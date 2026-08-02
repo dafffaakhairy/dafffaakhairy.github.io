@@ -1,0 +1,1248 @@
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background: #090b1a;
+
+    color: #ffffff;
+
+    overflow-x: hidden;
+
+    position: relative;
+
+    min-height: 100vh;
+
+}
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.aurora {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -3;
+
+    background:
+        linear-gradient(-45deg,
+            #0b1026,
+            #1b2559,
+            #341c57,
+            #6d1f53);
+
+    background-size: 400% 400%;
+
+    animation: auroraMove 18s ease infinite;
+
+}
+
+.stars {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+    opacity: .35;
+
+    background-image:
+        radial-gradient(#ffffff 1px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    animation: starsMove 180s linear infinite;
+
+}
+
+#floating-hearts {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+}
+
+.hero-content {
+
+    width: 100%;
+
+    max-width: 900px;
+
+}
+
+.date {
+
+    display: inline-block;
+
+    padding: 10px 24px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    backdrop-filter: blur(12px);
+
+    color: #ffd166;
+
+    margin-bottom: 25px;
+
+}
+
+.hero h1 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 88px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+
+        0 0 25px rgba(255, 95, 162, .35);
+
+}
+
+.hero p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #e7e7e7;
+
+    font-size: 18px;
+
+    line-height: 2;
+
+}
+
+/* ==========================================================
+   HERO PHOTO
+========================================================== */
+
+.hero-photo {
+
+    position: relative;
+
+    display: inline-block;
+
+    margin: 55px 0 40px;
+
+}
+
+.hero-photo::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -20px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(rgba(255, 95, 162, .45),
+
+            transparent 70%);
+
+    filter: blur(30px);
+
+    animation: photoGlow 4s ease-in-out infinite;
+
+}
+
+.hero-photo img {
+
+    width: 280px;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 8px solid rgba(255, 255, 255, .95);
+
+    box-shadow:
+
+        0 25px 60px rgba(0, 0, 0, .35);
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: floatPhoto 5s ease-in-out infinite;
+
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 16px 36px;
+
+    border-radius: 999px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+
+    background:
+
+        linear-gradient(135deg,
+
+            #ff5fa2,
+
+            #ff87bf);
+
+    transition: .35s;
+
+    box-shadow:
+
+        0 15px 35px rgba(255, 95, 162, .35);
+
+}
+
+button:hover {
+
+    transform:
+
+        translateY(-4px) scale(1.05);
+
+    box-shadow:
+
+        0 20px 45px rgba(255, 95, 162, .45);
+
+}
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+section {
+
+    width: 100%;
+
+    padding: 100px 20px;
+
+}
+
+section h2 {
+
+    text-align: center;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 64px;
+
+    margin-bottom: 18px;
+
+}
+
+section>p {
+
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: 0 auto 50px;
+
+    color: #d7d7d7;
+
+    line-height: 2;
+
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes auroraMove {
+
+    0% {
+
+        background-position: 0% 50%;
+
+    }
+
+    50% {
+
+        background-position: 100% 50%;
+
+    }
+
+    100% {
+
+        background-position: 0% 50%;
+
+    }
+
+}
+
+@keyframes starsMove {
+
+    from {
+
+        transform: translateY(0);
+
+    }
+
+    to {
+
+        transform: translateY(-1000px);
+
+    }
+
+}
+
+@keyframes floatPhoto {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-14px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes photoGlow {
+
+    0% {
+
+        opacity: .45;
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        opacity: .9;
+
+        transform: scale(1.08);
+
+    }
+
+    100% {
+
+        opacity: .45;
+
+        transform: scale(1);
+
+    }
+
+}
+
+/* ==========================================================
+   COUNTER
+========================================================== */
+
+.counter {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 28px;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+.counter-card {
+
+    width: 230px;
+
+    padding: 35px 25px;
+
+    border-radius: 24px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    backdrop-filter: blur(18px);
+
+    transition: .35s;
+
+    box-shadow:
+
+        0 18px 45px rgba(0, 0, 0, .25);
+
+}
+
+.counter-card:hover {
+
+    transform:
+
+        translateY(-10px) scale(1.03);
+
+    box-shadow:
+
+        0 25px 55px rgba(255, 95, 162, .28);
+
+}
+
+.counter-card h2 {
+
+    font-size: 58px;
+
+    color: #ff8cc2;
+
+    margin-bottom: 8px;
+
+}
+
+.counter-card span {
+
+    color: #dddddd;
+
+    font-size: 16px;
+
+}
+
+/* ==========================================================
+   BIRTHDAY CARD
+========================================================== */
+
+.birthday {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.birthday-card {
+
+    width: min(850px, 100%);
+
+    padding: 55px 45px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    box-shadow:
+
+        0 25px 60px rgba(0, 0, 0, .30);
+
+}
+
+.birthday-card h2 {
+
+    margin-bottom: 12px;
+
+}
+
+.birthday-card h3 {
+
+    color: #ffd166;
+
+    margin-bottom: 28px;
+
+    font-weight: 500;
+
+}
+
+.birthday-card p {
+
+    line-height: 2;
+
+    font-size: 18px;
+
+    color: #ececec;
+
+}
+
+/* ==========================================================
+   GALLERY
+========================================================== */
+
+.gallery-section {
+
+    max-width: 1300px;
+
+    margin: auto;
+
+}
+
+.gallery {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 42px;
+
+    margin-top: 60px;
+
+}
+
+/* POLAROID */
+
+.gallery figure {
+
+    width: 240px;
+
+    background: #ffffff;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    color: #222;
+
+    box-shadow:
+
+        0 20px 45px rgba(0, 0, 0, .35);
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease;
+
+    cursor: pointer;
+
+}
+
+/* Rotasi seperti scrapbook */
+
+.gallery figure:nth-child(1) {
+
+    transform: rotate(-5deg);
+
+}
+
+.gallery figure:nth-child(2) {
+
+    transform: rotate(4deg);
+
+}
+
+.gallery figure:nth-child(3) {
+
+    transform: rotate(-3deg);
+
+}
+
+.gallery figure:nth-child(4) {
+
+    transform: rotate(6deg);
+
+}
+
+.gallery figure:nth-child(5) {
+
+    transform: rotate(-4deg);
+
+}
+
+.gallery figure:nth-child(6) {
+
+    transform: rotate(5deg);
+
+}
+
+.gallery figure:hover {
+
+    transform:
+
+        rotate(0deg) translateY(-12px) scale(1.05);
+
+    box-shadow:
+
+        0 30px 70px rgba(255, 95, 162, .35);
+
+}
+
+.gallery figure img {
+
+    width: 100%;
+
+    height: 290px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 5px;
+
+}
+
+.gallery figcaption {
+
+    margin-top: 14px;
+
+    text-align: center;
+
+    font-weight: 600;
+
+    font-size: 15px;
+
+    color: #444;
+
+}
+
+/* ==========================================================
+   LIGHTBOX
+========================================================== */
+
+.lightbox {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(0, 0, 0, .92);
+
+    z-index: 9999;
+
+    padding: 30px;
+
+}
+
+.lightbox.show {
+
+    display: flex;
+
+    animation: fadeIn .3s ease;
+
+}
+
+.lightbox img {
+
+    max-width: 90%;
+
+    max-height: 90vh;
+
+    border-radius: 16px;
+
+    box-shadow:
+
+        0 25px 60px rgba(0, 0, 0, .45);
+
+}
+
+#closeLightbox {
+
+    position: absolute;
+
+    top: 30px;
+
+    right: 40px;
+
+    font-size: 60px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+#closeLightbox:hover {
+
+    color: #ff7ab6;
+
+    transform: scale(1.15);
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+/* ==========================================================
+   LETTER SECTION
+========================================================== */
+
+.letter-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 120px 20px;
+
+}
+
+
+/* ==========================================================
+   LETTER MODAL
+========================================================== */
+
+.overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, .75);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 9998;
+
+}
+
+
+.overlay.show {
+
+    display: flex;
+
+    animation: fadeIn .35s ease;
+
+}
+
+
+
+.letter {
+
+    width: min(700px, 100%);
+
+    max-height: 85vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    color: #333;
+
+    border-radius: 28px;
+
+    padding: 40px;
+
+    box-shadow:
+
+        0 30px 80px rgba(0, 0, 0, .45);
+
+    animation: letterPop .45s ease;
+
+}
+
+
+
+.letter h2 {
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 52px;
+
+    color: #ff5fa2;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+#typing {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding-right: 12px;
+
+    line-height: 2;
+
+    font-size: 16px;
+
+    color: #444;
+
+}
+
+
+
+#typing p {
+
+    margin-bottom: 18px;
+
+}
+
+
+
+/* Scroll surat */
+
+#typing::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+
+#typing::-webkit-scrollbar-track {
+
+    background: #eeeeee;
+
+    border-radius: 20px;
+
+}
+
+
+#typing::-webkit-scrollbar-thumb {
+
+    background: #ff7ab6;
+
+    border-radius: 20px;
+
+}
+
+
+
+#closeLetter {
+
+    flex-shrink: 0;
+
+    margin: 25px auto 0;
+
+}
+
+
+
+/* ==========================================================
+   FLOATING HEART
+========================================================== */
+
+
+.heart {
+
+    position: fixed;
+
+    bottom: -40px;
+
+    color: #ff8bc2;
+
+    pointer-events: none;
+
+    animation: heartFloat linear forwards;
+
+    z-index: 0;
+
+}
+
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+
+footer {
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+}
+
+
+
+footer h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 72px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+footer p {
+
+    color: #dddddd;
+
+    line-height: 2;
+
+    max-width: 600px;
+
+    margin: auto;
+
+}
+
+
+
+footer h3 {
+
+    margin-top: 30px;
+
+    color: #ffd166;
+
+    font-weight: 500;
+
+}
+
+
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+
+@keyframes letterPop {
+
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateY(40px) scale(.92);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateY(0) scale(1);
+
+    }
+
+}
+
+
+
+@keyframes heartFloat {
+
+
+    0% {
+
+        transform:
+
+            translateY(0) rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+
+    15% {
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+
+        transform:
+
+            translateY(-120vh) rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+
+@media(max-width:768px) {
+
+
+    .hero h1 {
+
+        font-size: 58px;
+
+    }
+
+
+
+    .hero-photo img {
+
+        width: 210px;
+
+        height: 210px;
+
+    }
+
+
+
+    section {
+
+        padding: 70px 20px;
+
+    }
+
+
+
+    section h2 {
+
+        font-size: 48px;
+
+    }
+
+
+
+    .counter-card {
+
+        width: 100%;
+
+        max-width: 300px;
+
+    }
+
+
+
+    .birthday-card {
+
+        padding: 35px 25px;
+
+    }
+
+
+
+    .birthday-card p {
+
+        font-size: 15px;
+
+    }
+
+
+
+    .gallery {
+
+        gap: 25px;
+
+    }
+
+
+
+    .gallery figure {
+
+        width: 190px;
+
+    }
+
+
+
+    .gallery figure img {
+
+        height: 230px;
+
+    }
+
+
+
+    .letter {
+
+        padding: 28px 22px;
+
+        max-height: 90vh;
+
+    }
+
+
+
+    .letter h2 {
+
+        font-size: 42px;
+
+    }
+
+
+
+    #typing {
+
+        font-size: 15px;
+
+    }
+
+
+
+    footer h2 {
+
+        font-size: 52px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:480px) {
+
+
+    .hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+
+    .date {
+
+        font-size: 13px;
+
+    }
+
+
+
+    .gallery figure {
+
+        width: 100%;
+
+        max-width: 280px;
+
+    }
+
+
+
+    .gallery figure img {
+
+        height: 320px;
+
+    }
+
+
+
+    #closeLightbox {
+
+        top: 15px;
+
+        right: 20px;
+
+        font-size: 45px;
+
+    }
+
+}

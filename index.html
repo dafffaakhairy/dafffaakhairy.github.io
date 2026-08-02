@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Diva ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Background -->
+
+    <div class="aurora"></div>
+
+    <div class="stars"></div>
+
+    <div id="floating-hearts"></div>
+
+    <!-- Music -->
+
+    <audio id="music" loop>
+        <source src="./foto/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <span class="date">
+
+                2 Agustus 2026
+
+            </span>
+
+            <h1>
+
+                Happy 3 Months ❤️
+
+            </h1>
+
+            <p>
+
+                Hari ini genap tiga bulan kita bersama.
+
+                Dan besok adalah hari spesialmu.
+
+            </p>
+
+            <div class="hero-photo">
+
+                <img src="foto/hero.jpg" alt="Hero">
+
+            </div>
+
+            <button id="startBtn">
+
+                🎵 Mulai Cerita
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- COUNTER -->
+
+    <section class="counter">
+
+        <div class="counter-card">
+
+            <h2 id="days">
+
+                90
+
+            </h2>
+
+            <span>Hari Bersama</span>
+
+        </div>
+
+        <div class="counter-card">
+
+            <h2>
+
+                3
+
+            </h2>
+
+            <span>Bulan</span>
+
+        </div>
+
+        <div class="counter-card">
+
+            <h2>
+
+                ❤️
+
+            </h2>
+
+            <span>Masih Berlanjut</span>
+
+        </div>
+
+    </section>
+
+    <!-- BIRTHDAY -->
+
+    <section class="birthday">
+
+        <div class="birthday-card">
+
+            <h2>
+
+                🎂 Happy Birthday Diva 🎂
+
+            </h2>
+
+            <h3>
+
+                3 Agustus 2026
+
+            </h3>
+
+            <p>
+
+                Selamat ulang tahun yang ke-24.
+
+                Semoga selalu sehat,
+
+                bahagia,
+
+                sukses,
+
+                dan semua impianmu menjadi nyata.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+
+    <section class="gallery-section">
+
+        <h2>
+
+            Our Memories 📸
+
+        </h2>
+
+        <p>
+
+            Setiap foto memiliki cerita.
+
+            Dan aku berharap,
+
+            cerita kita akan terus bertambah.
+
+        </p>
+
+        <div class="gallery">
+
+            <figure>
+
+                <img src="foto/photo2.jpeg">
+
+                <figcaption>
+
+                    ❤️ First Date
+
+                </figcaption>
+
+            </figure>
+
+            <figure>
+
+                <img src="foto/5.jpeg">
+
+                <figcaption>
+
+                    🎮 PS Date
+
+                </figcaption>
+
+            </figure>
+
+            <figure>
+
+                <img src="foto/1.jpeg">
+
+                <figcaption>
+
+                    📸 Foto Favoritku
+
+                </figcaption>
+
+            </figure>
+
+            <figure>
+
+                <img src="foto/7.jpeg">
+
+                <figcaption>
+
+                    🎬 Nonton Bareng
+
+                </figcaption>
+
+            </figure>
+
+            <figure>
+
+                <img src="foto/6.jpeg">
+
+                <figcaption>
+
+                    💕 3 Months
+
+                </figcaption>
+
+            </figure>
+
+            <figure>
+
+                <img src="foto/8.jpeg">
+
+                <figcaption>
+
+                    ♾️ To Many More Memories
+
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+    </section>
+
+    <!-- LETTER -->
+
+    <section class="letter-section">
+
+        <button id="openLetter">
+
+            💌 Buka Surat
+
+        </button>
+
+    </section>
+
+    <!-- MODAL -->
+
+    <div class="overlay" id="overlay">
+
+        <div class="letter">
+
+            <h2>
+
+                Untuk Diva ❤️
+
+            </h2>
+
+            <div id="typing-source" style="display:none;">
+
+                <p>
+                    Selamat ulang tahun ya sayang ❤️
+                </p>
+
+                <p>
+                    Hari ini usiamu genap 24 tahun.
+                </p>
+
+                <p>
+                    Terima kasih sudah hadir di hidupku.
+                </p>
+
+                <p>
+                    Walaupun kita baru tiga bulan bersama,
+                    rasanya kamu sudah menjadi bagian penting
+                    dalam hidupku.
+                </p>
+
+                <p>
+                    Semoga kamu selalu sehat,
+                    bahagia,
+                    dan semua impianmu tercapai.
+                </p>
+
+                <p>
+                    Aku berharap,
+                    ini hanyalah awal
+                    dari perjalanan panjang kita.
+                </p>
+
+                <p>
+
+                    Happy Birthday ❤️
+
+                </p>
+
+                <p>
+
+                    I Love You.
+
+                </p>
+
+                <p>
+
+                    - Daffa
+
+                </p>
+
+            </div>
+
+            <div id="typing">
+
+            </div>
+
+            <button id="closeLetter">
+
+                Tutup
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- LIGHTBOX -->
+
+    <div class="lightbox" id="lightbox">
+
+        <span id="closeLightbox">
+
+            &times;
+
+        </span>
+
+        <img id="lightboxImage">
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>
+
+            Thank You ❤️
+
+        </h2>
+
+        <p>
+
+            Semoga Birthday card ini
+            bisa membuatmu tersenyum.
+
+        </p>
+
+        <p>
+
+            Semoga Birthday card ini
+            bisa membuatmu tersenyum.
+
+        </p>
+
+        <h3>
+
+            Love,
+
+            Daffa ❤️
+
+        </h3>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
